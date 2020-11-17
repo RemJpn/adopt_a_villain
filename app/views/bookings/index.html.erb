@@ -1,18 +1,31 @@
 <div class="container">
-  <h1>All your bookings</h1>
+  <h1>Bookings</h1>
 </div>
 
 <div class="container py-4">
+  <ul class="list-inline tabs-underlined">
+    <li>
+      <a href="#" class="tab-underlined active">Upcoming bookings</a>
+    </li>
+    <li>
+      <a href="#" class="tab-underlined">Previous bookings</a>
+    </li>
+  </ul>
+</div>
+<div class="container">
   <div class="cards-booking">
     <% @bookings.each do |booking| %>
 
         <%= link_to booking_path(booking) do %>
         <div class="card-booking">
-          <img src="https://cache.desktopnexus.com/thumbseg/2358/2358429-bigthumbnail.jpg" />
+        <div class="card-booking-image" style="background-image: url('https://cache.desktopnexus.com/thumbseg/2358/2358429-bigthumbnail.jpg')">
+        </div>
           <div class="card-booking-infos">
-            <h2>Your booking with <strong><%= booking.villain.name %></strong></h2>
-            <p><i class="fas fa-map-marked"></i> <%= booking.address %> <%= booking.post_code %> <%= booking.city %></p>
-            <p><i class="fas fa-calendar-day"></i> From <%= booking.start_date %> to <%= booking.end_date %></p>
+            <div>
+              <p><i class="fas fa-calendar-day"></i> From <%= booking.start_date %> to <%= booking.end_date %></p>
+              <h2><%= booking.villain.name %></h2>
+            </div>
+            <h2 class="card-booking-place"><i class="fas fa-map-marker-alt"></i> <%= booking.city %></h2>
           </div>
         </div>
         <% end %>
