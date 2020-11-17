@@ -1,0 +1,37 @@
+.card-feature {
+  overflow: hidden;
+  background: #240e26;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 300px;
+  text-align: center;
+  padding:20px 0;
+  border-radius: 5px;
+  color:white;
+}
+
+.card-feature > img {
+  height: 160px;
+  // width: 100%;
+  // object-fit: cover;
+}
+
+.card-feature h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-feature p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-feature-infos {
+  padding: 16px;
+}
+
+#robbery{
+  filter: invert(1);
+}
