@@ -22,7 +22,7 @@ class VillainsController < ApplicationController
     @villain = Villain.new(villain_params)
     @villain.user = current_user
     if @villain.save
-      redirect_to 'show'
+      redirect_to villain_path(@villain)
     else
       render :new
     end
