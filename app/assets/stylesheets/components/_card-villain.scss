@@ -1,0 +1,99 @@
+.cards-villain {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: transform .2s ease-in-out, filter .2s ease-in-out;
+    }
+
+      a:hover {
+      transition: transform .2s ease-in-out, filter .2s ease-in-out;
+      transform: scale(1.05);
+      filter: grayscale(100%);
+    }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards-villain {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards-villain {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards-villain {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards-villain {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards-villain {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card-villain {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.card-villain-image {
+  height: 200px;
+  background-size: cover;
+  background-position: top;
+}
+
+.card-villain > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-villain h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-villain p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-villain .card-villain-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+
+// .card-villain-infos .card-villain-user {
+//   position: absolute;
+//   right: 16px;
+//   top: -20px;
+//   width: 40px;
+// }
