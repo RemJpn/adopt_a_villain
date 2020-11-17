@@ -10,6 +10,10 @@ class VillainsController < ApplicationController
     end
   end
 
+  def show
+    @villain = Villain.find(params[:id])
+  end
+
   def new
     @villain = Villain.new
   end

@@ -1,0 +1,39 @@
+<div class="page-show-villain">
+  <div class= "container py-5">
+    <div class="row show-villain">
+      <div class="col-lg-8">
+        <h1><%= @villain.name %></h1>
+        <p><%= @villain.description %></p>
+        <table>
+          <tr>
+            <th class="pr-3">Nastiness Level</th>
+            <th class="pl-3">Price/day</th>
+          </tr>
+          <tr>
+            <th class="text-center"><%= @villain.nastiness %></th>
+            <th class="text-center"><%= @villain.daily_price %> €</th>
+          </tr>
+        </table>
+        <div class="card-book-show">
+          <div class="cards_book_show-background py-2">
+            <form class="new_booking" id="new_booking" action="bookings/:id" accept-charset="UTF-8" method="post">
+              <div class="form-group">
+                <label for="start-calendar">Start</label>
+                <input class="form-control" type="date" id="start-calendar" placeholder="20/04/20">
+                <label for="end-calendar">end</label>
+                <input class="form-control" type="date" id="end-calendar" placeholder="20/04/20">
+                <button type="submit" class="btn btn-primary rounded-pill mt-3">Book Now</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="section-reviews pt-5">
+          <h1>Reviews</h1>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <%= image_tag "drax.png", alt: "alttext" %>
+      </div>
+    </div>
+  </div>
+</div>
