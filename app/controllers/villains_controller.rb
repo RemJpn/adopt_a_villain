@@ -12,6 +12,7 @@ class VillainsController < ApplicationController
 
   def show
     @villain = Villain.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
