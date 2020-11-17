@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>All your bookings</h1>
+</div>
+
+<div class="container py-4">
+  <div class="cards-booking">
+    <% @bookings.each do |booking| %>
+
+        <%= link_to booking_path(booking) do %>
+        <div class="card-booking">
+          <img src="https://cache.desktopnexus.com/thumbseg/2358/2358429-bigthumbnail.jpg" />
+          <div class="card-booking-infos">
+            <h2>Your booking with <strong><%= booking.villain.name %></strong></h2>
+            <p><i class="fas fa-map-marked"></i> <%= booking.address %> <%= booking.post_code %> <%= booking.city %></p>
+            <p><i class="fas fa-calendar-day"></i> From <%= booking.start_date %> to <%= booking.end_date %></p>
+          </div>
+        </div>
+        <% end %>
+
+    <% end %>
+
+  </div>
+</div>
+
