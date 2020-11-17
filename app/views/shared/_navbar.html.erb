@@ -1,0 +1,28 @@
+<div class="navbar navbar-expand-sm navbar-dark navbar-lewagon">
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "death_star_logo.png" %>
+    Adopt a Villain
+  <% end %>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
+        <li class="nav-item dropdown">
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Action", "#", class: "dropdown-item" %>
+            <%= link_to "Another action", "#", class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to "Sign up", new_user_registration_path, class: "btn button-signup mr-3" %>
+        </li>
+        <li>
+          <%= link_to "Log in", new_user_session_path, class: "btn button-signin" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

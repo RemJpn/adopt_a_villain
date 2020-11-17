@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AdoptAVillain</title>
+    <title>Adopt a Villain</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="icon" href="../../assets/images/death_star_logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
@@ -12,8 +13,10 @@
   </head>
 
   <body>
+    <%= render 'shared/navbar' %>
+    <%= yield %>
+
    <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
-    <%= yield %>
   </body>
 </html>
