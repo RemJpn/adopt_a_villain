@@ -1,0 +1,45 @@
+.page-show-villain {
+  background-color: #4C1E4F;
+}
+
+.show-villain {
+  h1 {
+    font-size: 60px;
+    font-weight: 800;
+    color: white;
+  }
+  p {
+    color: white;
+  }
+}
+
+.cards_book_show-background {
+  background-color: #C4C4C4;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+
+.card-book-show {
+  padding-top: 20px;
+}
+
+.text-current-price {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.section-reviews {
+  h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+  }
+}
