@@ -1,2 +1,57 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1 class="d-none">Adopt a villain</h1>
+
+<div class="banner">
+  <div class="container d-flex flex-column justify-content-between h-100">
+    <div>
+      <h2 id="catchphrase">
+<!--         You have always dreamed of having the Joker for you birthday?
+        <br><br>
+        Spending the week end with Dracula?
+        <br><br>
+        Playing backgammon with Darth Vador? -->
+      </h2>
+    </div>
+
+
+    <form class="form-inline mt-5"  action='/villains' methode='get'>
+      <div id="home-search-form">
+        <div>
+          <input name="keyword" id="search-typed-text" class="form-control w-100 mb-1" type="search" placeholder="Joker, mayhem, Bordeaux...">
+          <div class="form-inline">
+            <input name="start_date" id="start_date" class="form-control mr-1" type="date">
+            <input name="end_date" id="end_date" class="form-control" type="date">
+          </div>
+        </div>
+        <button class="btn button-search ml-3" type="submit">Check the villains</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="d-flex justify-content-around my-5">
+
+  <div class="card-feature">
+    <%= image_tag "https://static.bimago.com/mediacache/catalog/product/cache/1/4/118141/image/650x440/cca180fee1fec294d57be8b76cb47086/118141_2.jpg" %>
+    <div class="card-feature-infos">
+      <h3>Find the closest available villain</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus labore fugiat molestiae dolorum commodi optio iusto facere in voluptatum perspiciatis quidem, aut. Aspernatur at quae natus sunt praesentium eius nulla.</p>
+    </div>
+  </div>
+
+  <div class="card-feature">
+    <%= image_tag "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F1%2F1c%2FSkull_%2526_crossbones.svg%2F622px-Skull_%2526_crossbones.svg.png&f=1&nofb=1"%>
+    <div class="card-feature-infos">
+      <h3>How nasty are you?</h3>
+      <p>Adapt the nastiness of the villain you seek to the occasion. You don't want the same villain for a birthday party and for an interview with your boss...</p>
+    </div>
+  </div>
+
+  <div class="card-feature">
+    <%= image_tag "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fcdn.onlinewebfonts.com%2Fsvg%2Fimg_37867.png&f=1&nofb=1", id: "robbery" %>
+    <div class="card-feature-infos">
+      <h3>Propose your services</h3>
+      <p>We know that current times are hard for villains. Earn a little extra cash to achieve your ultimate goals!</p>
+    </div>
+  </div>
+
+</div>

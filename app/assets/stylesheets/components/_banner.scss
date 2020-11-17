@@ -1,0 +1,23 @@
+.banner {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://static1.srcdn.com/wordpress/wp-content/uploads/2019/11/The-Joker.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 86vh;
+  // height: calc(100vh - )
+  padding: 150px 0;
+}
+
+.banner h2 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
