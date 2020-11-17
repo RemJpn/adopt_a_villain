@@ -3,6 +3,11 @@ class VillainsController < ApplicationController
 
   def index
     @villains = Villain.all
+    @search = params["search"]
+    if @search.present?
+      @name = @search["name"]
+      @villains = Villain.where("name ILIKE ?", "%#{@name}%")
+    end
   end
 
   def new
