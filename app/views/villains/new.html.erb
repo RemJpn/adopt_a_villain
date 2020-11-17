@@ -1,2 +1,15 @@
-<h1>Create your villain</h1>
+<div class="container">
+  <h1>Create your villain</h1>
+
+  <%= simple_form_for @villain do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description, as: :text %>
+    <%= f.input :nastiness, collection: 1..5 %>
+    <%= f.input :daily_price %>
+    <%= f.button :submit, class: "btn btn-primary" %>
+  <% end %>
+</div>
+
+
+
 
