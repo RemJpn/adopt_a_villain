@@ -16,13 +16,13 @@
         </table>
         <div class="card-book-show">
           <div class="cards_book_show-background py-2">
-            <form action="/villains/:id/bookings/" method=POST>
+            <form class="new_booking" id="new_booking" action="bookings/:id" accept-charset="UTF-8" method="post">
               <div class="form-group">
                 <label for="start-calendar">Start</label>
                 <input class="form-control" type="date" id="start-calendar" placeholder="20/04/20">
-                <div class="text-current-price text-center">270 €</div>
                 <label for="end-calendar">end</label>
                 <input class="form-control" type="date" id="end-calendar" placeholder="20/04/20">
+                <div class="text-current-price text-center">270 €</div>
                 <button type="submit" class="btn btn-primary rounded-pill mt-3">Book Now</button>
               </div>
             </form>
