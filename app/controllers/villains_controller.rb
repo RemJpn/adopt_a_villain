@@ -1,5 +1,5 @@
 class VillainsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:index]
+  skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
     @villains = Villain.all
@@ -12,6 +12,7 @@ class VillainsController < ApplicationController
 
   def show
     @villain = Villain.find(params[:id])
+    @booking = Booking.new
   end
 
   def new
