@@ -1,6 +1,6 @@
-.cards-villain {
+.cards-booking {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
 
     a {
@@ -18,78 +18,79 @@
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .cards-villain {
+  .cards-booking {
     grid-template-columns: 1fr;
   }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .cards-villain {
+  .cards-booking {
     grid-template-columns: 1fr;
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .cards-villain {
+  .cards-booking {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .cards-villain {
-    grid-template-columns: 1fr 1fr 1fr;
+  .cards-booking {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .cards-villain {
-    grid-template-columns: 1fr 1fr 1fr;
+  .cards-booking {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-.card-villain {
+.card-booking {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
   border-radius: 3px;
 }
 
-.card-villain-image {
+.card-booking-image {
   height: 200px;
   background-size: cover;
   background-position: top;
 }
 
-.card-villain > img {
+.card-booking > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-villain h2 {
+.card-booking h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-villain p {
+.card-booking p {
   font-size: 12px;
-  opacity: .7;
-  margin: 0;
+  opacity: .6;
+  margin: 5px 0;
 }
 
 
-.card-villain .card-villain-infos {
+.card-booking .card-booking-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
 }
+
 
 
 // .card-villain-infos .card-villain-user {

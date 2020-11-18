@@ -1,4 +1,11 @@
 class BookingsController < ApplicationController
+
+  before_action :set_booking, only: [:show]
+
+  def index
+    @bookings = Booking.where(user_id: current_user)
+  end
+
   def create
     @booking = Booking.new(booking_params)
     @booking.villain_id = params['villain_id']
@@ -7,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.total_price = duration * @booking.villain.daily_price
 
     if @booking.save
-      redirect_to booking_path
+      redirect_to booking_path(@booking)
     else
       render 'villains/show'
     end
@@ -18,7 +25,11 @@ class BookingsController < ApplicationController
 
   private
 
+  def set_booking
+   @booking = Booking.find(params[:id])
+  end
+
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :address, :post_code, :city)
+   params.require(:booking).permit(:start_date, :end_date, :address, :post_code, :city)
   end
 end
