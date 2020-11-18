@@ -5,8 +5,8 @@ class VillainsController < ApplicationController
     @villains = Villain.all
     @search = params["search"]
     if @search.present?
-      @name = @search["name"]
-      @villains = Villain.where("name ILIKE ?", "%#{@name}%")
+      @keyword = @search["keyword"]
+      @villains = Villain.where("name ILIKE ?", "%#{@keyword}%")
     end
   end
 
