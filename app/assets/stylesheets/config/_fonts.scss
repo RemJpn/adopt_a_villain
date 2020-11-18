@@ -2,14 +2,15 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 // Define fonts for body and headers
 $body-font: "Roboto", "Helvetica", "sans-serif";
 $headers-font: "Nunito", "Helvetica", "sans-serif";
 
 
 // To use a font file (.woff) uncomment following lines
-@font-face {
-  font-family: "NoScary";
-  src: font-url('../../fonts/NoScary-regular.ttf');
-}
-$noscary: "NoScary";
+// @font-face {
+//   font-family: 'NoScary';
+//   src: font-url('../../fonts/NoScary-regular.ttf') format("truetype");
+// }
+$noscary: "Creepster";
