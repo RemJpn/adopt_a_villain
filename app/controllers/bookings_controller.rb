@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.villain_id = params['villain_id']
     @booking.user = current_user
-    duration = @booking.end_date - @booking.start_date
+    duration = @booking.end_date - @booking.start_date + 1
     @booking.total_price = duration * @booking.villain.daily_price
 
     if @booking.save
