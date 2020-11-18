@@ -1,6 +1,44 @@
-<div class="container">
-  <h1>Your booking with <%= @booking.villain.name %> </h1>
-  <p>Starts at : <%= @booking.start_date %></p>
-  <p>Finishes at : <%= @booking.end_date %></p>
-  <p>Address : <%= @booking.address %>, <%= @booking.post_code %> <%= @booking.city %></p>
+<div class="banner-villain banner-villain-booking" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('https://images.wallpapersden.com/image/download/darkseid-dc-villain_bGdram2UmZqaraWkpJRobWllrWdma2U.jpg')">
+  <div class="container">
+    <h1>Your booking with <%= @booking.villain.name %></h1>
+  </div>
+</div>
+
+<div class="container py-4">
+  <div class="row">
+  <div class="col-8 d-flex flex-column justify-content-between">
+    <div class="card">
+      <div class="card-header">
+        <h3><i class="far fa-address-card"></i> About <%= @booking.villain.name %></h3>
+      </div>
+      <div class="card-body">
+        <p><%= @booking.villain.description %></p>
+        <div class="progress-items d-flex">
+          <p>Nastiness</p>
+          <div class="progress mx-2" style="width: 100px">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: <%= @booking.villain.nastiness * 20 %>%;" aria-valuenow="<%= @booking.villain.nastiness * 20%>" aria-valuemin="0" aria-valuemax="100"><%= @booking.villain.nastiness * 20%>%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="button-list">
+    <%= link_to "See all my booking", bookings_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+  <div class="col-4">
+    <div class="card">
+      <div class="card-header">
+        <h3><i class="fas fa-calendar-day"></i> Dates</h3>
+        <ul class="list-unstyled">
+          <li>Starts at : <%= @booking.start_date %></li>
+          <li>Finishes at : <%= @booking.end_date %></li>
+        </ul>
+      </div>
+      <div class="card-body">
+        <h3><i class="fas fa-map-marker-alt"></i> Address</h3>
+        <p><%= @booking.address %>, <%= @booking.post_code %> <%= @booking.city %></p>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
