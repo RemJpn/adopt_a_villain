@@ -5,15 +5,23 @@
 }
 
 .button-signin {
-  background: #577590;
+  background: #4C1E4F;
   color: white;
   border-radius: 5px;
   width: 100px;
+  &:hover {
+  background: #250d26;
+  color: white;
+  }
 }
 
 .button-signup {
-  background: #FF2E00;
+  background: #212529;
   color: white;
   border-radius: 5px;
   width: 100px;
+  &:hover {
+  background: black;
+  color: white;
+  }
 }
