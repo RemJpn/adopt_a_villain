@@ -5,12 +5,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
 // Define fonts for body and headers
 $body-font: "Roboto", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$headers-font: "Roboto", "Helvetica", "sans-serif";
 
 
 // To use a font file (.woff) uncomment following lines
-// @font-face {
-//   font-family: 'NoScary';
-//   src: font-url('../../fonts/NoScary-regular.ttf') format("truetype");
-// }
-$noscary: "Creepster";
+@font-face {
+  font-family: 'NoScary';
+  src: font-url('/assets/NoScary-regular.ttf') format("truetype");
+}
+$noscary: "Noscary";
