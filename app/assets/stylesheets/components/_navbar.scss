@@ -5,6 +5,10 @@
   width: 100%;
 }
 
+.navbar-brand {
+  font-family: $noscary;
+}
+
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
