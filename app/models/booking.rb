@@ -5,7 +5,8 @@ class Booking < ApplicationRecord
 
   validates :start_date, presence: true
   validates :end_date, presence: true
-  validates :address, presence: true
-  validates :post_code, presence: true
-  validates :city, presence: true
+  # validates :address, presence: true
+  # validates :post_code, presence: true
+  # validates :city, presence: true
+  validates :total_price, presence: true
 end

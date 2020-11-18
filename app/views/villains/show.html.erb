@@ -4,35 +4,35 @@
       <div class="col-lg-8">
         <h1><%= @villain.name %></h1>
         <p><%= @villain.description %></p>
-        <table>
+        <table class="text-white">
           <tr>
             <th class="pr-3">Nastiness Level</th>
             <th class="pl-3">Price/day</th>
           </tr>
           <tr>
-            <th class="text-center"><%= @villain.nastiness %></th>
+            <th class="text-center"><%= @villain.nastiness %> <i class="fas fa-skull-crossbones"></i></th>
             <th class="text-center"><%= @villain.daily_price %> €</th>
           </tr>
         </table>
-        <div class="card-book-show">
-          <div class="cards_book_show-background py-2">
-            <form class="new_booking" id="new_booking" action="/bookings" accept-charset="UTF-8" method="post">
-              <div class="form-group">
-                <label for="start-calendar">Start</label>
-                <input class="form-control" type="date" id="start-calendar" placeholder="20/04/20">
-                <label for="end-calendar">end</label>
-                <input class="form-control" type="date" id="end-calendar" placeholder="20/04/20">
-                <button type="submit" class="btn btn-primary rounded-pill mt-3">Book Now</button>
-              </div>
-            </form>
-          </div>
+
+        <div class="form-booking py-2">
+<!--             <form class="new_booking" id="new_booking" action="/bookings" accept-charset="UTF-8" method="post">
+            <div class="form-group">
+              <label for="start-calendar">Start</label>
+              <input class="form-control" type="date" id="start-calendar" placeholder="20/04/20">
+              <label for="end-calendar">end</label>
+              <input class="form-control" type="date" id="end-calendar" placeholder="20/04/20">
+              <button type="submit" class="btn btn-primary rounded-pill mt-3">Book Now</button>
+            </div>
+          </form> -->
+          <%= simple_form_for [@villain, @booking], class: "form-group" do |f| %>
+            <%= f.input :start_date, as: :date%>
+            <%= f.input :end_date %>
+            <%= f.submit class: "btn btn-primary mt-3" %>
+          <% end %>
         </div>
 
-        <%= simple_form_for [@villain, @booking], class: "form-group" do |f| %>
-          <%= f.input :start_date, as: :date%>
-          <%= f.input :end_date %>
-          <%= f.submit %>
-        <% end %>
+
 
         <div class="section-reviews pt-5">
           <h1>Reviews</h1>
