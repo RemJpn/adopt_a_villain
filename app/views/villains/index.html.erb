@@ -3,8 +3,8 @@
   <div class="container">
     <h1>Why so <strong>serious</strong> ?</h1>
       <%= simple_form_for :search, url: villains_path, method: "GET", html: { class: 'form-inline justify-content-center pt-4' } do |f| %>
-      <%= f.input :name, label: false, placeholder: "Dracula, Darth Vador... ", input_html: {value: ""} %>
-      <%= f.submit "Search", class: "btn btn-primary" %>
+        <%= f.input :keyword, label: false, placeholder: "Dracula, Darth Vador... ", input_html: {value: ""} %>
+        <%= f.submit "Search", class: "btn btn-primary" %>
       <% end %>
   </div>
 </div>
