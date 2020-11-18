@@ -13,9 +13,10 @@
   }
 }
 
-.cards_book_show-background {
+.form-booking {
+  margin-top: 20px;
   background-color: #C4C4C4;
-  width: 40%;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,10 +27,6 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-
-.card-book-show {
-  padding-top: 20px;
-}
 
 .text-current-price {
   font-size: 40px;
