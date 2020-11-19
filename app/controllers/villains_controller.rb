@@ -13,6 +13,7 @@ class VillainsController < ApplicationController
   def show
     @villain = Villain.find(params[:id])
     @booking = Booking.new
+    @reviews = Review.all
   end
 
   def new
