@@ -1,10 +1,14 @@
-
-<div class="container">
-  <div class="card p-3 m-3" style="background: #adabab">
-    <%= simple_form_for [ @booking, @review ] do |f| %>
-      <%= f.input :comment, as: :text %>
-      <%= f.input :rating, collection: 1..5 %>
-      <%= f.submit "Submit review", class: "btn btn-primary" %>
-    <% end %>
+<div class="page-new-review">
+  <div class="container">
+    <div class="d-flex justify-content-center">
+      <div class="card-review mt-5">
+        <%= simple_form_for [ @booking, @review ] do |f| %>
+          <%= f.input :comment, as: :text %>
+          <%= f.input :rating, collection: 1..5 %>
+          <%= f.submit "Submit review", class: "btn btn-ghost-review" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
+

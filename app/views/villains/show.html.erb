@@ -36,8 +36,13 @@
             <h1>Reviews</h1>
           </div>
             <% @reviews.each do |review| %>
-              <%= review.rating %>
-              <%= review.comment %>
+            <div class= "list-reviews">
+              <ul class="list-unstyled">
+                <li>By Baptiste</li>
+                <li><%= review.rating %></li>
+                <li><%= review.comment %></li>
+              </ul>
+            </div>
             <% end %>
         <% end %>
       </div>

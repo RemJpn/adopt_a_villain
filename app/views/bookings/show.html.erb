@@ -23,8 +23,8 @@
             <div>
               <p>Review</p>
               <ul class="list-group">
-                  <li class="list-group-item"><%= @booking.review.comment %></li>
-                  <li class="list-group-item"><%= @booking.review.rating %></li>
+                  <li class="list-group-item rounded-pill mb-1">My comment: <br> <%= @booking.review.comment %></li>
+                  <li class="list-group-item rounded-pill">Rating: <br> <%= @booking.review.rating %></li>
               </ul>
             </div>
           <% end %>
@@ -54,7 +54,9 @@
     <div id="button-list" class="mt-3">
     <%= link_to "See all my booking", bookings_path, class: "btn btn-primary" %>
     </div>
-    <div id="button-list" class="mt-3">
-    <%= link_to "Add a review", new_booking_review_path(booking_id: @booking.id), class: "btn btn-primary" %>
-    </div>
+    <% unless @booking.review.present? %>
+      <div id="button-list" class="mt-3">
+      <%= link_to "Add a review", new_booking_review_path(booking_id: @booking.id), class: "btn btn-primary" %>
+      </div>
+    <% end %>
 </div>
