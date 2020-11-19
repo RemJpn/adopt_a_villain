@@ -21,7 +21,7 @@ class VillainsController < ApplicationController
       lat: @villain.latitude,
       lng: @villain.longitude
     }]
-
+    @reviews = Review.all
   end
 
   def new
