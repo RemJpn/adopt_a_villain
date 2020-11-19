@@ -12,7 +12,10 @@ class VillainsController < ApplicationController
   def show
     @villain = Villain.find(params[:id])
     @booking = Booking.new
-
+    @markers = [{
+      lat: @villain.latitude,
+      lng: @villain.longitude
+    }]
   end
 
   def new
