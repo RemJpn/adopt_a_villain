@@ -2,36 +2,66 @@
   <h1>Bookings</h1>
 </div>
 
+<!-- Nav tabs -->
 <div class="container py-4">
-  <ul class="list-inline tabs-underlined">
-    <li>
-      <a href="#" class="tab-underlined active">Upcoming bookings</a>
-    </li>
-    <li>
-      <a href="#" class="tab-underlined">Previous bookings</a>
-    </li>
-  </ul>
-</div>
-<div class="container">
-  <div class="cards-booking">
-    <% @bookings.each do |booking| %>
+<ul class="nav list-inline tabs-underlined" id="myTab" role="tablist">
+  <li>
+    <a class="tab-underlined active" id="upcoming-tab" data-toggle="tab" href="#upcoming" role="tab" aria-controls="upcoming" aria-selected="true">Upcoming booking</a>
+  </li>
+  <li>
+    <a class="tab-underlined" id="previous-tab" data-toggle="tab" href="#previous" role="tab" aria-controls="previous" aria-selected="false">Previous bookings</a>
+  </li>
+</ul>
 
-        <%= link_to booking_path(booking) do %>
-        <div class="card-booking">
-        <div class="card-booking-image" style="background-image: url('https://cache.desktopnexus.com/thumbseg/2358/2358429-bigthumbnail.jpg')">
-        </div>
-          <div class="card-booking-infos">
-            <div>
-              <p><i class="fas fa-calendar-day"></i> From <%= booking.start_date %> to <%= booking.end_date %></p>
-              <h2><%= booking.villain.name %></h2>
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active" id="upcoming" role="tabpanel" aria-labelledby="upcoming-tab">
+    <div class="cards-booking mt-4">
+      <% if @upcoming_bookings.empty? %>
+        <div class='no-booking mt-4'>You have no upcoming bookings yet</h2>
+      <% else %>
+        <% @upcoming_bookings.each do |booking| %>
+            <%= link_to booking_path(booking) do %>
+            <div class="card-booking">
+            <div class="card-booking-image" style="background-image: url('https://cache.desktopnexus.com/thumbseg/2358/2358429-bigthumbnail.jpg')">
             </div>
-            <h2 class="card-booking-place"><i class="fas fa-map-marker-alt"></i> <%= booking.city %></h2>
-          </div>
-        </div>
+              <div class="card-booking-infos">
+                <div>
+                  <p><i class="fas fa-calendar-day"></i> From <%= booking.start_date %> to <%= booking.end_date %></p>
+                  <h2><%= booking.villain.name %></h2>
+                </div>
+                <h2 class="card-booking-place"><i class="fas fa-map-marker-alt"></i> <%= booking.city %></h2>
+              </div>
+            </div>
+            <% end %>
         <% end %>
+        <% end %>
+      </div>
+  </div>
+  <div class="tab-pane" id="previous" role="tabpanel" aria-labelledby="previous-tab">
+    <div class="cards-booking mt-4">
 
-    <% end %>
-
+      <% if @previous_bookings.empty? %>
+        <div class='no-booking mt-4'>You have no previous bookings</div>
+      <% else %>
+        <% @previous_bookings.each do |booking| %>
+          <%= link_to booking_path(booking) do %>
+            <div class="card-booking">
+              <div class="card-booking-image" style="background-image: url('https://cache.desktopnexus.com/thumbseg/2358/2358429-bigthumbnail.jpg')">
+              </div>
+              <div class="card-booking-infos">
+                <div>
+                  <p><i class="fas fa-calendar-day"></i> From <%= booking.start_date %> to <%= booking.end_date %></p>
+                  <h2><%= booking.villain.name %></h2>
+                </div>
+                <h2 class="card-booking-place"><i class="fas fa-map-marker-alt"></i> <%= booking.city %></h2>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 
+</div>
