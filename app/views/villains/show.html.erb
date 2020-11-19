@@ -8,10 +8,12 @@
           <tr>
             <th class="pr-3">Nastiness Level</th>
             <th class="pl-3">Price/day</th>
+            <th class="pl-3">Address</th>
           </tr>
           <tr>
             <th class="text-center"><%= @villain.nastiness %> <i class="fas fa-skull-crossbones"></i></th>
             <th class="text-center"><%= @villain.daily_price %> €</th>
+            <th class="text-center"><%= @villain.address %></th>
           </tr>
         </table>
 
@@ -44,8 +46,8 @@
         </div>
       </div>
       <div class="col-lg-4">
-        <%#= cl_image_tag @villain.photo.key, height: 600, width: 400, crop: :fill %>
-        <%= image_tag "drax.png", alt: "alttext" %>
+        <%= cl_image_tag @villain.photo.key, height: 300, width: 300, crop: :fill %>
+        <%#= image_tag "drax.png", alt: "alttext" %>
       </div>
     </div>
   </div>

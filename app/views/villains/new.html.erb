@@ -4,9 +4,10 @@
 
 <div class="container">
   <div class="card p-3 m-3" style="background: #adabab">
-    <%= simple_form_for @villain do |f| %>
+    <%= simple_form_for(@villain) do |f| %>
       <%= f.input :name %>
       <%= f.input :description, as: :text %>
+      <%= f.input :address %>
       <%= f.input :nastiness, collection: 1..5 %>
       <%= f.input :daily_price %>
       <%= f.input :photo, as: :file %>
