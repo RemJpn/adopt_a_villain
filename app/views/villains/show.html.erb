@@ -28,10 +28,10 @@
             </div>
           </form> -->
           <%= simple_form_for [@villain, @booking], class: "form-group" do |f| %>
-            <%= f.input :start_date, as: :date%>
-            <%= f.input :end_date %>
+            <%= f.input :start_date, as: :string, type: :text, input_html: { id: "datepicker" } %>
+            <%= f.input :end_date, as: :string, type: :text, input_html: { id: "datepicker" } %>
             <%= f.input :address, input_html: {value: params['booking_address'] }, placeholder: "Your booking location" %>
-            <%= f.submit class: "btn btn-primary mt-3" %>
+            <%= f.submit "Book", class: "btn btn-primary mt-3" %>
           <% end %>
         </div>
 
