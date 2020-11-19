@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require "open-uri"
 
 
 puts "Start"
@@ -13,24 +14,49 @@ Booking.destroy_all
 Villain.destroy_all
 User.destroy_all
 
-puts "Seeding..."
+puts "Seeding admin"
+
+new_user = User.new(
+  first_name: "admin",
+  last_name: "admin",
+  email: "admin@admin.com",
+  password: "123456",
+  is_villain: true
+  )
+
+new_user.save!
+
+puts "Admin saved"
+
+puts "Seeding users and villains"
+
+
 
 20.times do
-  new_user = User.new
-  new_user.first_name = Faker::Name.first_name
-  new_user.last_name = Faker::Name.last_name
-  new_user.email = Faker::Internet.email
-  new_user.password = "123456"
-  new_user.is_villain = true
+  new_user = User.new(
+    first_name: Faker::Name.first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email,
+    password: "123456",
+    is_villain: true
+   )
 
   new_user.save!
 
-  new_villain = Villain.new
-  p new_villain.name = Faker::Superhero.unique.name
-  new_villain.description = Faker::GreekPhilosophers.quote
-  new_villain.nastiness = rand(1..5)
-  new_villain.daily_price = rand(20..3000)
-  new_villain.user = new_user
+  file = URI.open('https://cache.desktopnexus.com/thumbseg/2358/2358429-bigthumbnail.jpg')
+  # https://vignette.wikia.nocookie.net/agotmod/images/9/95/Kingrobert.jpg/revision/latest/top-crop/width/360/height/450?cb=20181008132401
+
+  new_villain = Villain.new(
+    name: Faker::Superhero.unique.name,
+    description: Faker::GreekPhilosophers.quote,
+    nastiness: rand(1..5),
+    daily_price: rand(20..3000),
+    address: "Bordeaux",
+    user: new_user
+    )
+  new_villain.photo.attach(io: file, filename: 'bobby.jpg', content_type: 'image/jpg')
+
+  p new_villain.name
 
   new_villain.save!
 
