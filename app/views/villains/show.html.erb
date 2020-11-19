@@ -28,8 +28,15 @@
           <%= simple_form_for [@villain, @booking], class: "form-group" do |f| %>
             <%= f.input :start_date, as: :date%>
             <%= f.input :end_date %>
+            <%= f.input :address, input_html: {value: params['booking_address'] }, placeholder: "Your booking location" %>
             <%= f.submit class: "btn btn-primary mt-3" %>
           <% end %>
+        </div>
+
+        <div id="map"
+             style="width: 100%; height: 600px;"
+             data-markers="<%= @markers.to_json %>"
+             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
 
         <div class="section-reviews pt-5">
