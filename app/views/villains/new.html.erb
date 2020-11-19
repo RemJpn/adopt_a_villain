@@ -1,0 +1,20 @@
+<div class="banner-villain" style="height: 300px; background-image: linear-gradient(rgba(20,20,20,0.4),rgba(20,20,20,0.4)), url('https://images2.alphacoders.com/992/thumb-1920-992779.jpg')">
+  <h1>Create your villain</h1>
+</div>
+
+<div class="container">
+  <div class="card p-3 m-3" style="background: #adabab">
+    <%= simple_form_for @villain do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description, as: :text %>
+      <%= f.input :nastiness, collection: 1..5 %>
+      <%= f.input :daily_price %>
+      <%= f.input :photo, as: :file %>
+      <%= f.button :submit, class: "btn button-search" %>
+    <% end %>
+  </div>
+</div>
+
+
+
+
