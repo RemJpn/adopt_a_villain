@@ -33,10 +33,20 @@
             <%= f.submit "Book", class: "btn btn-primary mt-3" %>
           <% end %>
         </div>
-
-        <div class="section-reviews pt-5">
-          <h1>Reviews</h1>
-        </div>
+        <% if @reviews.present? %>
+          <div class="section-reviews pt-5">
+            <h1>Reviews</h1>
+          </div>
+            <% @reviews.each do |review| %>
+            <div class= "list-reviews">
+              <ul class="list-unstyled">
+                <li>By Baptiste</li>
+                <li><%= review.rating %></li>
+                <li><%= review.comment %></li>
+              </ul>
+            </div>
+            <% end %>
+        <% end %>
       </div>
       <div class="col-lg-4">
         <%= cl_image_tag @villain.photo.key, height: 300, width: 300, crop: :fill %>

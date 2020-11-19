@@ -1,0 +1,27 @@
+.page-new-review {
+  background-color: #4C1E4F;
+  padding-top: 100px;
+}
+
+.card-review {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 50%;
+  padding: 50px;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+
+.btn-ghost-review {
+  color: #4C1E4F;;
+  border: 1px solid #4C1E4F;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  &:hover {
+    opacity: 1;
+    background-color: #4C1E4F;
+    color: white;
+  }
+}
