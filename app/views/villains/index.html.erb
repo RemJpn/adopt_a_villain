@@ -3,7 +3,7 @@
   <div class="container">
     <h1>Why so <strong>serious</strong> ?</h1>
       <%= simple_form_for :search, url: villains_path, method: "GET", html: { class: 'form-inline justify-content-center pt-4' } do |f| %>
-        <%= f.input :keyword, label: false, placeholder: "Dracula, Darth Vador... ", input_html: {value: ""} %>
+        <%= f.input :booking_address, label: false, placeholder: "Search by location", input_html: {value: @booking_address} %>
         <%= f.submit "Search", class: "btn btn-primary" %>
       <% end %>
   </div>
@@ -12,7 +12,7 @@
 <div class="container py-4">
   <div class="cards-villain">
     <% @villains.each do |villain| %>
-      <%= link_to villain_path(villain) do %>
+      <%= link_to villain_path(villain, booking_address: @booking_address) do %>
       <div class="card-villain">
         <div class="card-villain-image" style="background-image: url('<%= cl_image_path villain.photo.key, height: 300, width: 400, crop: :fill %>')">
           <!-- https://cache.desktopnexus.com/thumbseg/2358/2358429-bigthumbnail.jpg -->
