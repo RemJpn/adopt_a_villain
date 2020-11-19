@@ -31,7 +31,7 @@ import { loadDynamicBannerText } from '../components/banner';
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initMapbox } from '../plugins/init_mapbox';
 // import { initSelect2 } from '../components/init_select2';
-import { loadDynamicBannerText } from '../components/banner';
+
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
