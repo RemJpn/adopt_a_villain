@@ -33,6 +33,10 @@ import { loadDynamicBannerText } from '../components/banner';
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  flatpickr("#datepicker", {});
+  flatpickr("#datepicker", {
+    altInput: true,
+    altFormat: "F j, Y",
+    dateFormat: "Y-m-d",
+  });
   loadDynamicBannerText();
 });
