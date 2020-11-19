@@ -21,7 +21,9 @@ class VillainsController < ApplicationController
       lat: @villain.latitude,
       lng: @villain.longitude
     }]
-    @reviews = Review.all
+    @reviews = @villain.reviews
+    @user = User.find(params[:id])
+    @name = @user.first_name
   end
 
   def new
