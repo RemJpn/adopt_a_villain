@@ -15,9 +15,11 @@ class BookingsController < ApplicationController
     duration = @booking.end_date - @booking.start_date + 1
     @booking.total_price = duration * @booking.villain.daily_price
 
+
     if @booking.save
       redirect_to booking_path(@booking)
     else
+      @villain = Villain.find(params['villain_id'])
       render 'villains/show'
     end
   end
