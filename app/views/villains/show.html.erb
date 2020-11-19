@@ -18,20 +18,23 @@
         </table>
 
         <div class="form-booking py-2">
-<!--             <form class="new_booking" id="new_booking" action="/bookings" accept-charset="UTF-8" method="post">
-            <div class="form-group">
-              <label for="start-calendar">Start</label>
-              <input class="form-control" type="date" id="start-calendar" placeholder="20/04/20">
-              <label for="end-calendar">end</label>
-              <input class="form-control" type="date" id="end-calendar" placeholder="20/04/20">
-              <button type="submit" class="btn btn-primary rounded-pill mt-3">Book Now</button>
-            </div>
-          </form> -->
+
           <%= simple_form_for [@villain, @booking], class: "form-group" do |f| %>
             <%= f.input :start_date, as: :string, type: :text, input_html: { id: "datepicker" } %>
             <%= f.input :end_date, as: :string, type: :text, input_html: { id: "datepicker" } %>
+            <%= f.input :address, input_html: {value: params['booking_address'] }, placeholder: "Your booking location" %>
             <%= f.submit "Book", class: "btn btn-primary mt-3" %>
           <% end %>
+        </div>
+
+        <div id="map" class="mt-5"
+             style="width: 500px; height: 300px;"
+             data-markers="<%= @markers.to_json %>"
+             data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+
+        <div class="section-reviews pt-5">
+          <h1>Reviews</h1>
         </div>
         <% if @reviews.present? %>
           <div class="section-reviews pt-5">
