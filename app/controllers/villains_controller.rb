@@ -2,10 +2,15 @@ class VillainsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @villains = Villain.all
     @search = params["search"]
-    if @search.present?
-      @villains = Villain.where("name ILIKE ?", "%#{@search['booking_address']}%")
+    @booking_address = @search['booking_address']
+
+    if @booking_address != ""
+      # On considere une recherche a 200km
+      @villains = Villain.near(@booking_address, 200)
+      # @villains = Villain.where("name ILIKE ?", "%#{@search['booking_address']}%")
+    else
+      @villains = Villain.all
     end
   end
 
