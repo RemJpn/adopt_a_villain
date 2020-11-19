@@ -16,6 +16,7 @@ class VillainsController < ApplicationController
       lat: @villain.latitude,
       lng: @villain.longitude
     }]
+
   end
 
   def new
