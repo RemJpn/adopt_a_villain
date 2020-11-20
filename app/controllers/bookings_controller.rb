@@ -12,12 +12,15 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.villain_id = params['villain_id']
     @booking.user = current_user
-    duration = @booking.end_date - @booking.start_date + 1
-    @booking.total_price = duration * @booking.villain.daily_price
+    if @booking.end_date && @booking.start_date
+      duration = @booking.end_date - @booking.start_date + 1
+      @booking.total_price = duration * @booking.villain.daily_price
+    end
 
     if @booking.save
       redirect_to booking_path(@booking)
     else
+      @villain = Villain.find(params['villain_id'])
       render 'villains/show'
     end
   end
