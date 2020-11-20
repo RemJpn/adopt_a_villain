@@ -48,7 +48,7 @@ villain1 = Villain.new(
   address: "Merignac",
   user: user1
 )
-villain1.photo.attach(io: File.open('app/assets/images/Harley_quinn_photo.jpg'), filename: 'Harley_quinn_photo.jpg', content_type: 'image/jpg')
+villain1.photo.attach(io: File.open('app/assets/images/harley_quinn_photo.jpg'), filename: 'harley_quinn_photo.jpg', content_type: 'image/jpg')
 villain1.poster.attach(io: File.open('app/assets/images/Harley_Quinn.png'), filename: 'Harley_Quinn.png', content_type: 'image/png')
 villain1.save!
 
