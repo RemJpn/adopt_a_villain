@@ -1,6 +1,6 @@
 <div class="page-show-villain">
 
-  <div class="row show-villain">
+  <div class="row show-villain pt-5">
     <div class="col-lg-6">
       <div class="container">
         <h1 ><%= @villain.name.upcase %></h1>
@@ -38,14 +38,16 @@
 
         <% if @reviews.present? %>
           <div class="section-reviews pt-5">
-            <h1>Reviews</h1>
+            <h1>
+              <%= pluralize @reviews.size, "review" %>
+            </h1>
           </div>
             <% @reviews.each do |review| %>
             <div class= "list-reviews">
               <ul class="list-unstyled">
-                <li> By <%= @name %></li>
+                <li> By <%= review.booking.user.first_name %></li>
                 <li> Rating: <%= review.rating %></li>
-                <li> Comment: <%= review.comment %></li>
+                <li> Comment:  <%= review.comment %></li>
               </ul>
             </div>
             <% end %>

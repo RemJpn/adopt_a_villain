@@ -41,6 +41,7 @@
   margin-top: 20px;
   background-color: transparent;
   border: 1px solid #e500a4;
+  color:white;
   width: 80%;
   display: flex;
   justify-content: center;
@@ -103,4 +104,11 @@
 
 .stars_nastiness {
   width: 5%;
+}
+
+.list-reviews {
+  background-color: transparent;
+  border-top: 2px solid #e500a4;
+  padding: 5px 5px 5px 10px;
+  color: white;
 }

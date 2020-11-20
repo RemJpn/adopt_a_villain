@@ -22,8 +22,10 @@ class VillainsController < ApplicationController
       lng: @villain.longitude
     }]
     @reviews = @villain.reviews
-    @user = User.find(params[:id])
-    @name = @user.first_name
+
+    # @booking = Booking.find(params[:id])
+    # @user = User.find(params[:id])
+    # @name = @booking.user.first_name
   end
 
   def new
