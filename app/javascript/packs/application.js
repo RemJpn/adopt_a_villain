@@ -46,7 +46,7 @@ document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   initAutocomplete();
   initMapbox();
-  AOS.init();
+  // AOS.init();
 });
 
 
