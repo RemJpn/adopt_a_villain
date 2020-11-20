@@ -26,10 +26,10 @@
             <%= f.input :start_date, as: :string, type: :text, input_html: { id: "datepicker"} %>
             <%= f.input :end_date, as: :string, type: :text, input_html: { id: "datepicker"} %>
             <%= f.input :address, input_html: {value: params['booking_address'] }, placeholder: "Your booking location" %>
-            <div class="text-center"><%= f.submit "Book Now", class: "btn btn-book mt-3" %></div>
+            <div class="text-center"><%= f.submit "Book Now", class: "btn button-pink-flash mt-3" %></div>
           <% end %>
         </div>
-        <h1>Villain Location</h1>
+        <h2>Villain Location</h2>
         <div id="map" class="mt-5"
              style="width: 500px; height: 300px;"
              data-markers="<%= @markers.to_json %>"
@@ -38,9 +38,9 @@
 
         <% if @reviews.present? %>
           <div class="section-reviews pt-5">
-            <h1>
+            <h2>
               <%= pluralize @reviews.size, "review" %>
-            </h1>
+            </h2>
           </div>
             <% @reviews.each do |review| %>
             <div class= "list-reviews">
