@@ -1,10 +1,9 @@
 <h1 class="d-none">Adopt a villain</h1>
 
-<div class="banner">
-  <div class="container d-flex flex-column justify-content-between h-100">
-    <div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= image_path "joker.jpeg" %>)">
+  <div id= "banner-container" class="container d-flex flex-column h-100">
+    <div id="catchphrase-container">
       <h2>You have always dreamed of</h2>
-      <br>
       <h2 id="catchphrase">
 <!--         You have always dreamed of having the Joker for you birthday?
         <br><br>
@@ -15,18 +14,15 @@
     </div>
 
 
-    <form class="form-inline mt-5"  action='/villains' methode='get'>
+    <form class="form-inline mr-auto"  action='/villains' methode='get'>
       <div id="home-search-form">
         <div>
-          <input name="search[booking_address]" id="booking_address" class="form-control w-100 mb-1" type="search" placeholder="Search by location">
-          <div class="form-inline">
-            <input name="start_date" id="start_date" class="form-control mr-1" type="date">
-            <input name="end_date" id="end_date" class="form-control" type="date">
-          </div>
+          <input name="search[booking_address]" id="booking_address" class="form-control" type="search" placeholder="Search by location">
         </div>
-        <button class="btn button-search ml-3" type="submit">Check the villains</button>
+        <button class="btn button-home-search" type="submit">Check the villains</button>
       </div>
     </form>
+    <div id="scroll"><i class="fas fa-chevron-down"></i></div>
   </div>
 </div>
 
