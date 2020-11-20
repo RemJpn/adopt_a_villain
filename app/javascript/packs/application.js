@@ -25,6 +25,8 @@ require("channels")
 // External imports
 import "bootstrap";
 import flatpickr from "flatpickr";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // Internal imports, e.g:
 import { loadDynamicBannerText } from '../components/banner';
@@ -44,4 +46,5 @@ document.addEventListener('turbolinks:load', () => {
   loadDynamicBannerText();
   initAutocomplete();
   initMapbox();
+  AOS.init();
 });

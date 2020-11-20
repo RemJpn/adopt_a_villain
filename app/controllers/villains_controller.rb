@@ -41,6 +41,6 @@ class VillainsController < ApplicationController
   private
 
   def villain_params
-    params.require(:villain).permit(:name, :description, :nastiness, :daily_price, :user_id, :photo)
+    params.require(:villain).permit(:name, :description, :nastiness, :daily_price, :user_id, :photo, :poster)
   end
 end
