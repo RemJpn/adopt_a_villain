@@ -3,6 +3,7 @@
   <div class="row show-villain pt-5">
     <div class="col-lg-6">
       <div class="container">
+        <%= link_to "Back to Villains list", :back, class: "btn btn-primary" %>
         <h1 ><%= @villain.name.upcase %></h1>
         <p><em><%= @villain.description %></em></p>
         <table class="text-white">
