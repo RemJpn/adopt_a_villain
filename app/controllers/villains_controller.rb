@@ -31,6 +31,8 @@ class VillainsController < ApplicationController
   def create
     @villain = Villain.new(villain_params)
     @villain.user = current_user
+    @villain.user.is_villain = true
+    @villain.user.save
     if @villain.save
       redirect_to villain_path(@villain)
     else

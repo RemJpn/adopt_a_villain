@@ -1,16 +1,18 @@
 <div class="navbar navbar-expand-sm navbar-dark navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "death_star_logo.png" %>
+    <%= image_tag "adopt_logo.png" %>
     Adopt a Villain
   <% end %>
 
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
+      <% if user_signed_in? && current_user.is_villain == (false || nil) %>
         <li>
           <%= link_to "Create your villain", new_villain_path, class: "btn button-create mr-3"  %>
         </li>
+      <% end %>
+      <% if user_signed_in? %>
         <li class="nav-item dropdown">
           <% if user_signed_in? == false %>
             <% elsif current_user.photo.attached? %>
