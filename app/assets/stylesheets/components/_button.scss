@@ -68,3 +68,28 @@
   color: white;
   }
 }
+
+.button-pink-flash {
+  position: relative;
+  display: inline-block;
+  padding: 10px 50px;
+  color: #e500a4;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  border: 2px solid #e500a4;
+  border-radius: 30px;
+  &:hover {
+  background: #e500a4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #e500a4,
+              0 0 25px #e500a4,
+              0 0 50px #e500a4,
+              0 0 100px #e500a4;
+  }
+}
