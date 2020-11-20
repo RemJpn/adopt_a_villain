@@ -45,6 +45,7 @@ puts "Seeding users and villains"
   new_user.save!
 
   file = URI.open('https://cache.desktopnexus.com/thumbseg/2358/2358429-bigthumbnail.jpg')
+  # file_poster = URI.open('<%= image_tag "drax.png"%>')
   # https://vignette.wikia.nocookie.net/agotmod/images/9/95/Kingrobert.jpg/revision/latest/top-crop/width/360/height/450?cb=20181008132401
 
   new_villain = Villain.new(
@@ -56,7 +57,7 @@ puts "Seeding users and villains"
     user: new_user
     )
   new_villain.photo.attach(io: file, filename: 'placeholder.jpg', content_type: 'image/jpg')
-  new_villain.poster.attach(io: file, filename: 'placeholder.jpg', content_type: 'image/jpg')
+  new_villain.poster.attach(io: File.open('app/assets/images/drax.png'), filename: 'placeholder.png', content_type: 'image/png')
 
 
   p new_villain.name
