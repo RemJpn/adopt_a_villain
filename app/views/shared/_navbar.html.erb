@@ -7,7 +7,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? && current_user.is_villain == (false || nil) %>
+      <% if user_signed_in? && (current_user.is_villain == false || current_user.is_villain == nil) %>
         <li>
           <%= link_to "Create your villain", new_villain_path, class: "btn button-create mr-3"  %>
         </li>

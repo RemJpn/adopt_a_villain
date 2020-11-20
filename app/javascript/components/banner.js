@@ -18,7 +18,8 @@ const loadDynamicBannerText = () => {
       strings: ["", "having the Joker at you birthday?","spending the week end with Dracula?", "playing backgammon with Darth Vader?"],
       typeSpeed: 50,
       startDelay: 700,
-      loop: false
+      loop: false,
+      showCursor: false
     });
   }
 }

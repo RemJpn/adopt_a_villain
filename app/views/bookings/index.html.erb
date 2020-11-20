@@ -23,8 +23,10 @@
         <% @upcoming_bookings.each do |booking| %>
             <%= link_to booking_path(booking) do %>
             <div class="card-booking">
-            <div class="card-booking-image" style="background-image: url('https://cache.desktopnexus.com/thumbseg/2358/2358429-bigthumbnail.jpg')">
+            <div class="card-booking-image" style="background-image: url('<%= cl_image_path booking.villain.photo.key, crop: :fill %>')">
             </div>
+           <!--  <div class="card-booking-image" style="background-image: url('https://cache.desktopnexus.com/thumbseg/2358/2358429-bigthumbnail.jpg')">
+            </div> -->
               <div class="card-booking-infos">
                 <div>
                   <p><i class="fas fa-calendar-day"></i> From <%= booking.start_date %> to <%= booking.end_date %></p>
@@ -47,7 +49,7 @@
         <% @previous_bookings.each do |booking| %>
           <%= link_to booking_path(booking) do %>
             <div class="card-booking">
-              <div class="card-booking-image" style="background-image: url('https://cache.desktopnexus.com/thumbseg/2358/2358429-bigthumbnail.jpg')">
+              <div class="card-booking-image" style="background-image: url('<%= cl_image_path booking.villain.photo.key, crop: :fill %>')">
               </div>
               <div class="card-booking-infos">
                 <div>
