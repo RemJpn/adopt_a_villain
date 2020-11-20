@@ -48,3 +48,5 @@ document.addEventListener('turbolinks:load', () => {
   initMapbox();
   AOS.init();
 });
+
+

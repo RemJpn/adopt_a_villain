@@ -15,6 +15,9 @@ const initMapbox = () => {
       container: 'map',
       style: 'mapbox://styles/remjpn/ckhosquhb24zm19nu2jj4kcys'
     });
+    map.on('load', function() {
+      map.resize();
+    });
 
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
@@ -24,6 +27,7 @@ const initMapbox = () => {
     });
 
     fitMapToMarkers(map, markers);
+
   }
 };
 

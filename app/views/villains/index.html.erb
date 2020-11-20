@@ -13,7 +13,7 @@
   <div class="cards-villain" >
     <% @villains.each do |villain| %>
       <%= link_to villain_path(villain, booking_address: @booking_address) do %>
-      <div class="card-villain" data-aos="fade-up">
+      <div class="card-villain" data-aos="fade-up" data-aos-duration="2s">
         <div class="card-villain-image" style="background-image: url('<%= cl_image_path villain.photo.key, height: 300, width: 400, crop: :fill %>')">
           <!-- https://cache.desktopnexus.com/thumbseg/2358/2358429-bigthumbnail.jpg -->
         </div>

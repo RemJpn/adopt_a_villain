@@ -5,9 +5,12 @@ const initAutocomplete = () => {
 
   if (document.getElementById('booking_address')) {
     addressInput = document.getElementById('booking_address');
-  } else {
+  } else if (document.getElementById('search_booking_address')){
     addressInput = document.getElementById('search_booking_address');
+  } else {
+    addressInput = document.getElementById('villain_address');
   }
+
   if (addressInput) {
     places({ container: addressInput });
   }
