@@ -54,7 +54,9 @@ puts "Seeding users and villains"
     address: "Bordeaux",
     user: new_user
     )
-  new_villain.photo.attach(io: file, filename: 'bobby.jpg', content_type: 'image/jpg')
+  new_villain.photo.attach(io: file, filename: 'placeholder.jpg', content_type: 'image/jpg')
+  new_villain.poster.attach(io: file, filename: 'placeholder.jpg', content_type: 'image/jpg')
+
 
   p new_villain.name
 
