@@ -41,7 +41,7 @@ user1 = User.new(
 )
 user1.save!
 villain1 = Villain.new(
-  name: "Harley Quinn"
+  name: "Harley Quinn",
   description: Faker::GreekPhilosophers.quote,
   nastiness: 3,
   daily_price: rand(20..3000),
@@ -63,7 +63,7 @@ user2 = User.new(
 )
 user2.save!
 villain2 = Villain.new(
-    name: "Catwoman"
+    name: "Catwoman",
     description: Faker::GreekPhilosophers.quote,
     nastiness: 2,
     daily_price: rand(20..3000),
@@ -84,7 +84,7 @@ user3 = User.new(
 )
 user3.save!
 villain3 = Villain.new(
-    name: "Malificient"
+    name: "Malificient",
     description: Faker::GreekPhilosophers.quote,
     nastiness: 5,
     daily_price: rand(20..3000),
@@ -105,7 +105,7 @@ user4 = User.new(
 )
 user4.save!
 villain4 = Villain.new(
-    name: "Cersei Lannister"
+    name: "Cersei Lannister",
     description: Faker::GreekPhilosophers.quote,
     nastiness: 5,
     daily_price: rand(20..3000),
@@ -126,14 +126,14 @@ user5 = User.new(
 )
 user5.save!
 villain5 = Villain.new(
-    name: "Thanos"
+    name: "Thanos",
     description: Faker::GreekPhilosophers.quote,
     nastiness: 4,
     daily_price: rand(20..3000),
     address: "Bordeaux",
     user: user5
 )
-villain5.photo.attach(io: File.open('app/assets/images/thanos_photo.png'), filename: 'thanos_photo.jpg', content_type: 'image/jpg')
+villain5.photo.attach(io: File.open('app/assets/images/thanos_photo.jpg'), filename: 'thanos_photo.jpg', content_type: 'image/jpg')
 villain5.poster.attach(io: File.open('app/assets/images/Thanos.png'), filename: 'Thanos.png', content_type: 'image/png')
 villain5.save!
 
@@ -147,7 +147,7 @@ user6 = User.new(
 )
 user6.save!
 villain6 = Villain.new(
-    name: "Dracula"
+    name: "Dracula",
     description: Faker::GreekPhilosophers.quote,
     nastiness: 2,
     daily_price: rand(20..3000),
@@ -168,7 +168,7 @@ user7 = User.new(
 )
 user7.save!
 villain7 = Villain.new(
-    name: "Darth Vader"
+    name: "Darth Vader",
     description: Faker::GreekPhilosophers.quote,
     nastiness: 4,
     daily_price: rand(20..3000),
