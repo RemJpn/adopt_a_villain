@@ -21,7 +21,11 @@ class VillainsController < ApplicationController
       lat: @villain.latitude,
       lng: @villain.longitude
     }]
-    @reviews = Review.all
+    @reviews = @villain.reviews
+
+    # @booking = Booking.find(params[:id])
+    # @user = User.find(params[:id])
+    # @name = @booking.user.first_name
   end
 
   def new
@@ -41,6 +45,6 @@ class VillainsController < ApplicationController
   private
 
   def villain_params
-    params.require(:villain).permit(:name, :description, :nastiness, :daily_price, :user_id, :photo, :poster)
+    params.require(:villain).permit(:name, :address, :description, :nastiness, :daily_price, :user_id, :photo, :poster)
   end
 end

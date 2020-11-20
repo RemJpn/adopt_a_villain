@@ -6,26 +6,86 @@
 .show-villain {
   h1 {
     font-size: 60px;
-    font-weight: 800;
+    font-weight: 900;
     color: white;
   }
   p {
     color: white;
+    font-size: 18px;
   }
+  h2 {
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+    padding: 10px;
+    border-bottom: 2px solid;
+  }
+}
+
+.show-villain {
+  .container {
+    width: 80%;
+  }
+}
+
+.subtitle-show-villain {
+  font-size: 30px;
+  border: 3px;
+}
+
+.result-description {
+  font-size: 20px;
 }
 
 .form-booking {
   margin-top: 20px;
-  background-color: #C4C4C4;
-  width: 60%;
+  background-color: transparent;
+  border: 1px solid #e500a4;
+  color:white;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 15px;
   font-weight: 300;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+}
+
+
+.box-form-booking {
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.input-width {
+  width: 40px;
+}
+
+.btn-book {
+  position: relative;
+  display: inline-block;
+  padding: 10px 50px;
+  color: #e500a4;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px;
+  border: 2px solid #e500a4;
+  border-radius: 30px;
+  &:hover {
+  background: #e500a4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #e500a4,
+              0 0 25px #e500a4,
+              0 0 50px #e500a4,
+              0 0 100px #e500a4;
+  }
 }
 
 
@@ -44,4 +104,11 @@
 
 .stars_nastiness {
   width: 5%;
+}
+
+.list-reviews {
+  background-color: transparent;
+  border-top: 2px solid #e500a4;
+  padding: 5px 5px 5px 10px;
+  color: white;
 }
