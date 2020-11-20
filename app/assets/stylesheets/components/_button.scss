@@ -5,13 +5,13 @@
 }
 
 .button-signin {
-  background: #4C1E4F;
+  background: #250d26;
   color: white;
   border-radius: 5px;
   width: 100px;
   &:hover {
-  background: #white;
-  color: 4C1E4F;
+  background: white;
+  color: #4C1E4F;
   }
 }
 
@@ -25,6 +25,21 @@
   width: 200px;
   height: 60px;
   font-size: 20px;
+  &:hover {
+  background: #250d26;
+  color: white;
+  }
+}
+
+.button-index-search {
+  background: #4C1E4F;
+  color: white;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  width: 200px;
+  // height: 60px;
   &:hover {
   background: #250d26;
   color: white;
@@ -47,6 +62,7 @@
   color: white;
   border-radius: 5px;
   width: 180px;
+  border: solid 1px #250d26;
   &:hover {
   background: #250d26;
   color: white;

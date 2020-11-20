@@ -3,3 +3,17 @@
 @import "show-villain";
 @import "new-review";
 
+.index-search-form {
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  // align-items: center;
+  margin: 0 auto;
+
+  .index-input{
+    background-color: rgba(255, 255, 255, .8);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 400px;
+  }
+}
