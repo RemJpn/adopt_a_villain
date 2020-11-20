@@ -10,6 +10,7 @@ require "open-uri"
 
 puts "Start"
 puts "Clean DB"
+Review.destroy_all
 Booking.destroy_all
 Villain.destroy_all
 User.destroy_all
