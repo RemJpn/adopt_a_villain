@@ -15,6 +15,22 @@
   }
 }
 
+.button-home-search {
+  background: #4C1E4F;
+  color: white;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  width: 200px;
+  height: 60px;
+  font-size: 20px;
+  &:hover {
+  background: #250d26;
+  color: white;
+  }
+}
+
 .button-signup {
   background: #212529;
   color: white;
@@ -27,7 +43,12 @@
 }
 
 .button-create {
-  background: #FF2E00;
+  background: #4C1E4F;
   color: white;
   border-radius: 5px;
+  width: 180px;
+  &:hover {
+  background: #250d26;
+  color: white;
+  }
 }

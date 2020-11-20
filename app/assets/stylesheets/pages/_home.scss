@@ -1,14 +1,28 @@
 // Specific CSS for your home-page
 #home-search-form {
-  background-color: #F8F8F8;
   border-radius: 5px;
-  padding: 15px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  // align-items: center;
   margin: 0 auto;
+
+  input{
+    background-color: rgba(255, 255, 255, .8);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 510px;
+    height: 60px;
+    font-size: 20px;
+  }
+}
+
+#catchphrase-container {
+  height: 130px;
+  width: 100%;
+  text-align: left;
 }
 
 body {
   background-color: #4C1E4F;
 }
+
